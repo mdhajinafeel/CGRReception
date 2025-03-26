@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="xlarge_margin">25dp</dimen>
+    <dimen name="xsmall_margin">3dp</dimen>
+
+    <dimen name="text_lmedium">18sp</dimen>
+    <dimen name="text_logo">12sp</dimen>
+    <dimen name="text_logo_login">16sp</dimen>
+    <dimen name="text_semimedium">16sp</dimen>
+    <dimen name="text_xmedium">15sp</dimen>
+    <dimen name="text_xmedium1">14sp</dimen>
+    <dimen name="text_xsmall">13sp</dimen>
+    <dimen name="text_xxlarge">24sp</dimen>
+    <dimen name="text_xxsmall">12sp</dimen>
+    <dimen name="text_xxxsmall">10sp</dimen>
+    <dimen name="text_xxxsmall1">11sp</dimen>
+
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_normal">15dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_xmedium">12dp</dimen>
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="medium_margin">10dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_xlarge">40dp</dimen>
+    <dimen name="margin_xminor">2dp</dimen>
+    <dimen name="margin_xnormal">16dp</dimen>
+    <dimen name="margin_xxnormal">18dp</dimen>
+    <dimen name="margin_zero">10dp</dimen>
+    <dimen name="large_margin">20dp</dimen>
+    <dimen name="login_btn">250dp</dimen>
+
+    <dimen name="card_corner_radius_verysmall">8dp</dimen>
+    <dimen name="corner_elevation_low">4dp</dimen>
+
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="layout_width_medium_large">300dp</dimen>
+</resources>

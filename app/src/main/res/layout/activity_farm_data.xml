@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back" />
+
+    <LinearLayout
+        android:id="@+id/lnrDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginEnd="@dimen/large_margin"
+        android:weightSum="1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardReception"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_normal">
+
+                <LinearLayout
+                    android:id="@+id/lnrFarmDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:baselineAligned="false"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/inventory_order"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium1"
+                            tools:ignore="TooDeepLayout" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvInventoryOrder"
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/total_pieces"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotalPieces"
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/total_gross_volume"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotalGrossVolume"
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/total_net_volume"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotalNetVolume"
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivExpand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    app:srcCompat="@drawable/ic_arrow_down_vector_big" />
+
+                <LinearLayout
+                    android:id="@+id/lnrFarmDetails1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:baselineAligned="false"
+                    android:gravity="start"
+                    android:layout_below="@+id/lnrFarmDetails"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/supplier_name"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSupplierName"
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/product_name"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvProductName"
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/measurement_systems"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMeasurementSystem"
+                            style="@style/style_TitleText_editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorCharcoal"
+                            android:textSize="@dimen/text_xmedium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCloseReception"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:background="@drawable/bg_button_reset"
+            android:enabled="true"
+            android:fontFamily="@font/montserrat_semibold"
+            android:shadowColor="@color/colorDarkGrey"
+            android:shadowDx="5"
+            android:shadowDy="6"
+            android:visibility="gone"
+            android:text="@string/close_farm"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_semimedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnrHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnrDetails"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:singleLine="true"
+            android:text="@string/circumference"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_logo_login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:singleLine="true"
+            android:text="@string/length"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_logo_login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:singleLine="true"
+            android:text="@string/pieces"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_logo_login" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddData"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="0.35"
+            android:background="@drawable/bg_button_rounded"
+            android:enabled="true"
+            android:fontFamily="@font/montserrat_semibold"
+            android:shadowColor="@color/colorDarkGrey"
+            android:shadowDx="5"
+            android:shadowDy="6"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/add"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_semimedium" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="0.35"
+            android:background="@drawable/bg_button_save"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:enabled="true"
+            android:fontFamily="@font/montserrat_semibold"
+            android:shadowColor="@color/colorDarkGrey"
+            android:shadowDx="5"
+            android:shadowDy="6"
+            android:text="@string/save"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_semimedium" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lnrHeading"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/containerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:layout_marginBottom="@dimen/xlarge_margin"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,102 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.codringreen.receptionloading'
+    compileSdk 35
+
+    buildFeatures {
+        buildConfig true  // ✅ Enable custom BuildConfig fields
+    }
+
+    defaultConfig {
+        applicationId "com.codringreen.receptionloading.dev"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "DEBUG", "false"
+        }
+
+        debug {
+            buildConfigField "boolean", "DEBUG", "true"
+        }
+    }
+
+    // ✅ Define Product Flavors
+    flavorDimensions "environment"
+
+    productFlavors {
+        dev {
+            dimension "environment"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            buildConfigField "String", "APPLICATION_NAME", "\"Reception Loading (Dev)\""
+            buildConfigField "String", "APP_INSTANCE_PREFIX", "\"CGR_RECEPTIONLOADING-DEV\""
+            buildConfigField "String", "CLIENT_USERNAME", "\"codringreenadmin\""
+            buildConfigField "String", "CLIENT_PASSWORD", "\"CodRinGreeN@dm1n#123\""
+            buildConfigField "String", "INVENTORY_BASE_URL", "\"https://portal.codringreen.com/api/\""
+            buildConfigField "String", "CONTENT_TYPE", "\"application/json\""
+        }
+
+        prod {
+            dimension "environment"
+            applicationId "com.codringreen.receptionloading"
+            versionNameSuffix "-dev"
+            buildConfigField "String", "APPLICATION_NAME", "\"Reception Loading (Prod)\""
+            buildConfigField "String", "APP_INSTANCE_PREFIX", "\"CGR_RECEPTIONLOADING-Prod\""
+            buildConfigField "String", "CLIENT_USERNAME", "\"codringreenadmin\""
+            buildConfigField "String", "CLIENT_PASSWORD", "\"CodRinGreeN@dm1n#123\""
+            buildConfigField "String", "INVENTORY_BASE_URL", "\"https://portal.codringreen.com/api/\""
+            buildConfigField "String", "CONTENT_TYPE", "\"application/json\""
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildToolsVersion '35.0.0'
+}
+
+dependencies {
+    // Dagger Core
+    implementation 'com.google.dagger:dagger:2.50'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.50'
+
+    implementation 'com.google.dagger:dagger-android:2.50'
+    implementation 'com.google.dagger:dagger-android-support:2.50'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.50'
+
+    // AndroidX Dependencies
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation 'com.google.android.material:material:1.11.0'
+
+    // Room Database (if using Room)
+    implementation "androidx.room:room-runtime:2.6.1"
+    annotationProcessor "androidx.room:room-compiler:2.6.1"
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'  // Gson converter
+
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+
+    // Stetho (for debugging)
+    implementation 'com.facebook.stetho:stetho:1.6.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.6.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+}

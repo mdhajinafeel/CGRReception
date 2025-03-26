@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="@dimen/padding_normal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/medium_margin"
+        android:paddingLeft="@dimen/medium_margin"
+        android:paddingEnd="@dimen/medium_margin"
+        android:paddingRight="@dimen/medium_margin"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInventoryOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:padding="@dimen/small_margin"
+            android:textColor="@color/colorCharcoal"
+            android:textSize="@dimen/text_xmedium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSupplierName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:padding="@dimen/small_margin"
+            android:textColor="@color/colorCharcoal"
+            android:textSize="@dimen/text_xmedium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReceivedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:padding="@dimen/small_margin"
+            android:textColor="@color/colorCharcoal"
+            android:textSize="@dimen/text_xmedium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalPieces"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:padding="@dimen/small_margin"
+            android:textColor="@color/colorCharcoal"
+            android:textSize="@dimen/text_xmedium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalGrossVolume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:padding="@dimen/small_margin"
+            android:textColor="@color/colorCharcoal"
+            android:textSize="@dimen/text_xmedium" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_edit"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_menu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoReception"
+            style="@style/style_TitleText_editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/small_margin"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:padding="@dimen/padding_large"
+            android:text="@string/no_pending_reception_available"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xxlarge"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReceptionLists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:isScrollContainer="true"
+            android:keepScreenOn="true"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabActionCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_xlarge"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:contentDescription="@string/add"
+            app:backgroundTint="@color/colorFabText"
+            app:elevation="10dp"
+            app:maxImageSize="20dp"
+            app:pressedTranslationZ="12dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            app:srcCompat="@drawable/ic_add"
+            app:tint="@null"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/lnrReception"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fabActionCreate"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddReception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/create_reception"
+                android:textColor="@color/colorFabText"
+                android:textSize="@dimen/text_lmedium" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabReception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/fabActionCreate"
+                android:contentDescription="ADD"
+                app:backgroundTint="@color/colorFabText"
+                app:maxImageSize="25dp"
+                app:shapeAppearanceOverlay="@style/fab_3_rounded"
+                app:srcCompat="@drawable/ic_reception"
+                app:tint="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrDispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lnrReception"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddDispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/create_dispatch"
+                android:textColor="@color/colorFabText"
+                android:textSize="@dimen/text_lmedium" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabDispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/fabActionCreate"
+                android:contentDescription="ADD"
+                app:backgroundTint="@color/colorFabText"
+                app:fabSize="mini"
+                app:maxImageSize="25dp"
+                app:shapeAppearanceOverlay="@style/fab_3_rounded"
+                app:srcCompat="@drawable/ic_dispatch"
+                app:tint="@null" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/navigation_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

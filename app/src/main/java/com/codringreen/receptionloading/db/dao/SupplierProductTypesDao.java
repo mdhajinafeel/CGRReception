@@ -1,0 +1,26 @@
+package com.codringreen.receptionloading.db.dao;
+
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
+import androidx.room.Query;
+
+import com.codringreen.receptionloading.db.entity.SupplierProductTypes;
+
+import java.util.List;
+
+@Dao
+public interface SupplierProductTypesDao {
+
+    @Query("DELETE FROM SupplierProductTypes")
+    void deleteAll();
+
+    @Query("SELECT * FROM SupplierProductTypes")
+    List<SupplierProductTypes> getSupplierProductTypes();
+
+    @Query("SELECT * FROM SupplierProductTypes WHERE productId = :productId AND supplierId = :sid")
+    List<SupplierProductTypes> getSuppliersProductTypesListsById(int productId, int sid);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertOrReplaceSupplierProductTypes(List<SupplierProductTypes> supplierProductTypes);
+}

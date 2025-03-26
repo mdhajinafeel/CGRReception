@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorBorderEditText">#707070</color>
+    <color name="colorButton">#084262</color>
+    <color name="colorButtonNegative">#012f2f</color>
+    <color name="colorCharcoal">#272727</color>
+    <color name="colorCharcoalHint">#585858</color>
+    <color name="colorDarkForest">#5b8248</color>
+    <color name="colorDarkGrey">#505050</color>
+    <color name="colorEditTextTitle">#fdf0ec</color>
+    <color name="colorFabText">#408943</color>
+    <color name="colorGreen">#a0c800</color>
+    <color name="colorHeader">#196086</color>
+    <color name="colorLightBlack">#3f3f3f</color>
+    <color name="colorLightGrey">#9e948e</color>
+    <color name="colorLightGrey1">#ffefeae7</color>
+    <color name="colorRed">#c03700</color>
+    <color name="colorRedError">#ff3333</color>
+    <color name="colorSuccess">#4bb543</color>
+    <color name="colorTextGrey">#b0b0b0</color>
+    <color name="notificationBarColor">#252b23</color>
+    <color name="secondaryColor">#252b23</color>
+    <color name="color_editTextTitle">#EBE6E3</color>
+    <color name="edit_acc_disable_color">#FCFAFA</color>
+</resources>
