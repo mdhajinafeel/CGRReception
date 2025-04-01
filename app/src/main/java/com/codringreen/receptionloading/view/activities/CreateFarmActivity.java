@@ -498,7 +498,7 @@ public class CreateFarmActivity extends BaseActivity implements View.OnClickList
                         } else {
                             purchaseContract = purchaseContractList.get(i);
                         }
-                        tvPurchaseContract.setText(purchaseContract.getContractCode());
+                        tvPurchaseContract.setText(String.format("%s - %s", purchaseContract.getDescription(), purchaseContract.getPurchaseUnit()));
                         farmViewModel.selectedPurchaseContract(purchaseContractList, purchaseContractArrayList, purchaseContract, i);
                         validateFields();
                     } catch (Exception e) {
@@ -744,6 +744,7 @@ public class CreateFarmActivity extends BaseActivity implements View.OnClickList
             farmDetail.setMeasurementSystem(farmViewModel.selectedPurchaseContract.getPurchaseUnit());
             farmDetail.setCircAllowance(farmViewModel.selectedPurchaseContract.getCircAllowance());
             farmDetail.setLengthAllowance(farmViewModel.selectedPurchaseContract.getLengthAllowance());
+            farmDetail.setDescription(farmViewModel.selectedPurchaseContract.getDescription());
             farmDetail.setTotalPieces(0);
             farmDetail.setGrossVolume(0);
             farmDetail.setNetVolume(0);

@@ -140,7 +140,7 @@ public class FarmDataActivity extends BaseActivity {
                 tvTotalGrossVolume.setText(df.format(farmDetails.getGrossVolume()));
                 tvTotalNetVolume.setText(df.format(farmDetails.getNetVolume()));
                 tvSupplierName.setText(farmDetails.getSupplierName());
-                tvMeasurementSystem.setText(farmDetails.getMeasurementSystem());
+                tvMeasurementSystem.setText(String.format("%s - %s", farmDetails.getDescription(), farmDetails.getMeasurementSystem()));
                 tvInventoryOrder.setText(farmDetails.getInventoryOrder());
                 tvProductName.setText(farmDetails.getProductName());
 

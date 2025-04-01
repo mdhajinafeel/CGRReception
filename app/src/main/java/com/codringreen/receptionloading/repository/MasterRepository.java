@@ -364,7 +364,7 @@ public class MasterRepository {
                 purchaseContract.setSupplierId(purchaseContractMasterResponse.getSupplierId());
                 purchaseContract.setCircAllowance(purchaseContractMasterResponse.getCircAllowance());
                 purchaseContract.setLengthAllowance(purchaseContractMasterResponse.getLengthAllowance());
-                purchaseContract.setDescription(purchaseContract.getDescription());
+                purchaseContract.setDescription(purchaseContractMasterResponse.getDescription());
                 purchaseContractList.add(purchaseContract);
             }
             purchaseContractDao.insertOrReplacePurchaseContract(purchaseContractList);

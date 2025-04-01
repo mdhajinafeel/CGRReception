@@ -14,8 +14,8 @@ android {
         applicationId "com.codringreen.receptionloading.dev"
         minSdk 24
         targetSdk 35
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -52,7 +52,6 @@ android {
         prod {
             dimension "environment"
             applicationId "com.codringreen.receptionloading"
-            versionNameSuffix "-dev"
             buildConfigField "String", "APPLICATION_NAME", "\"Reception Loading (Prod)\""
             buildConfigField "String", "APP_INSTANCE_PREFIX", "\"CGR_RECEPTIONLOADING-Prod\""
             buildConfigField "String", "CLIENT_USERNAME", "\"codringreenadmin\""

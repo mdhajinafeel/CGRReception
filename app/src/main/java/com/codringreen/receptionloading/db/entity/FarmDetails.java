@@ -44,8 +44,12 @@ public class FarmDetails implements Serializable {
     private boolean isSynced;
 
     private String tempFarmId;
+
     private double circAllowance;
+
     private double lengthAllowance;
+
+    private String description;
 
     public int getId() {
         return id;
@@ -197,5 +201,13 @@ public class FarmDetails implements Serializable {
 
     public void setLengthAllowance(double lengthAllowance) {
         this.lengthAllowance = lengthAllowance;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

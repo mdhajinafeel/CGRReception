@@ -265,43 +265,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lnrButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/lnrDetails"
-        android:layout_marginStart="@dimen/large_margin"
-        android:layout_marginEnd="@dimen/large_margin"
-        android:weightSum="0.9">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Shorts"
-            android:layout_weight="0.3"
-            android:background="@drawable/bg_button" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:text="Shorts"
-            android:background="@drawable/bg_button" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="0dp"
-            android:text="Longs"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:background="@drawable/bg_button" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/lnrHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lnrButtons"
+        android:layout_below="@id/lnrDetails"
         android:layout_marginStart="@dimen/large_margin"
         android:layout_marginLeft="@dimen/large_margin"
         android:layout_marginTop="@dimen/medium_margin"

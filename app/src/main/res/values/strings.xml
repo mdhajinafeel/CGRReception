@@ -1,11 +1,10 @@
 <resources>
-    <string name="app_name">Reception Loading - Test</string>
+    <string name="app_name">Reception - Test</string>
     <string name="pay_to">Pay To</string>
     <string name="pieces">Pieces</string>
     <string name="pieces_removed">Pieces removed successfully!!!…</string>
     <string name="product">Product :</string>
     <string name="product_name">Product Name</string>
-    <string name="project_id">fieldinventory-370f5</string>
     <string name="purchase_contract">Purchase Contract</string>
     <string name="received_date">Received Date</string>
     <string name="received_date_1">Received Date :</string>
@@ -40,7 +39,6 @@
     <string name="select_upload_image">Upload Image</string>
     <string name="shipping_line">Shipping Line</string>
     <string name="status">Status</string>
-    <string name="status_bar_notification_info_overflow">999+</string>
     <string name="supplier_name">Supplier Name</string>
     <string name="supplier_name_1">Supplier Name :</string>
     <string name="synchronization">Synchronization</string>
@@ -78,8 +76,6 @@
     <string name="invalid_user">Incorrect username or password</string>
     <string name="inventory_order">Inventory Order</string>
     <string name="inventory_order_1">Inventory Order :</string>
-    <string name="item_view_role_description">Tab</string>
-    <string name="label">Label</string>
     <string name="lbl_choose_from_gallery">Choose from gallery</string>
     <string name="lbl_take_camera_picture">Take a picture</string>
     <string name="length">Length</string>
@@ -105,7 +101,6 @@
     <string name="error">Error</string>
     <string name="circumference">Circumference</string>
     <string name="circumference1">Circumference</string>
-    <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="close">Close</string>
     <string name="close_container">Close Container</string>
     <string name="close_container_confirmation">Are you sure want to close the container?.</string>
